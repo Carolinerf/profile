@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(135deg, #2d1f1f 0%, #3d2c2c 50%, #4a3232 100%);
+  min-height: 100vh;
+  color: #e8e8e8;
+  padding: 40px 20px;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.profile h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ffb347, #ffcc80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile p {
+  font-size: 1.2rem;
+  color: #b8a394;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+section > h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ffb347;
+  display: inline-block;
+}
+
+.skills-section,
+.projects-section {
+  margin-bottom: 30px;
+}
+
+.skills-section h3,
+.projects-section h3 {
+  font-size: 1.2rem;
+  color: #b8a394;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  padding: 8px 20px;
+  background: rgba(255, 179, 71, 0.15);
+  border: 1px solid rgba(255, 179, 71, 0.3);
+  border-radius: 25px;
+  font-size: 0.95rem;
+  color: #ffb347;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(255, 179, 71, 0.25);
+  transform: translateY(-2px);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.project-card p {
+  color: #b8a394;
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tech-tags span {
+  padding: 4px 12px;
+  background: rgba(255, 136, 0, 0.2);
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #ffaa4d;
+}
+
+.project-card a {
+  color: #ffb347;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.project-card a:hover {
+  color: #fff;
+}
