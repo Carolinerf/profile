@@ -1,3 +1,22 @@
+:root {
+  --bg-default: #1c1917;
+  --bg-darker: #0c0a09;
+  --bg-card: #292524;
+  --bg-card-hover: #363230;
+  --text-default: #f5f5f4;
+  --text-secondary: #d6d3d1;
+  --text-tertiary: #a6a09b;
+  --text-muted: #79716b;
+  --border-default: #363230;
+  --border-light: #2c2827;
+  --brand: #50c47c;
+  --brand-light: #7dd56f;
+  --brand-dark: #42be80;
+  --brand-darkest: #28b487;
+  --brand-tint: rgba(80, 196, 124, 0.12);
+  --brand-tint-light: rgba(80, 196, 124, 0.22);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,9 +25,9 @@
 
 body {
   font-family: 'Segoe UI', system-ui, sans-serif;
-  background: linear-gradient(135deg, #2d1f1f 0%, #3d2c2c 50%, #4a3232 100%);
+  background: linear-gradient(135deg, var(--bg-default) 0%, var(--bg-darker) 100%);
   min-height: 100vh;
-  color: #e8e8e8;
+  color: var(--text-default);
   padding: 40px 20px;
 }
 
@@ -26,7 +45,7 @@ main {
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 10px;
-  background: linear-gradient(90deg, #ffb347, #ffcc80);
+  background: linear-gradient(90deg, var(--brand), var(--brand-darkest));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -34,7 +53,7 @@ main {
 
 .profile p {
   font-size: 1.2rem;
-  color: #b8a394;
+  color: var(--text-secondary);
 }
 
 section {
@@ -45,7 +64,7 @@ section > h2 {
   font-size: 1.8rem;
   margin-bottom: 25px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #ffb347;
+  border-bottom: 2px solid var(--brand);
   display: inline-block;
 }
 
@@ -57,7 +76,7 @@ section > h2 {
 .skills-section h3,
 .projects-section h3 {
   font-size: 1.2rem;
-  color: #b8a394;
+  color: var(--text-tertiary);
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -71,16 +90,16 @@ section > h2 {
 
 .skill-tag {
   padding: 8px 20px;
-  background: rgba(255, 179, 71, 0.15);
-  border: 1px solid rgba(255, 179, 71, 0.3);
+  background: var(--brand-tint);
+  border: 1px solid var(--brand-dark);
   border-radius: 25px;
   font-size: 0.95rem;
-  color: #ffb347;
+  color: var(--brand);
   transition: all 0.3s ease;
 }
 
 .skill-tag:hover {
-  background: rgba(255, 179, 71, 0.25);
+  background: var(--brand-tint-light);
   transform: translateY(-2px);
 }
 
@@ -91,27 +110,27 @@ section > h2 {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
   border-radius: 16px;
   padding: 24px;
   transition: all 0.3s ease;
 }
 
 .project-card:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--bg-card-hover);
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .project-card h4 {
   font-size: 1.3rem;
   margin-bottom: 8px;
-  color: #fff;
+  color: var(--text-default);
 }
 
 .project-card p {
-  color: #b8a394;
+  color: var(--text-tertiary);
   font-size: 0.95rem;
   margin-bottom: 16px;
 }
@@ -125,19 +144,20 @@ section > h2 {
 
 .tech-tags span {
   padding: 4px 12px;
-  background: rgba(255, 136, 0, 0.2);
+  background: var(--brand-tint);
   border-radius: 12px;
   font-size: 0.8rem;
-  color: #ffaa4d;
+  color: var(--brand-dark);
 }
 
 .project-card a {
-  color: #ffb347;
+  color: var(--brand);
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.2s ease;
 }
 
 .project-card a:hover {
-  color: #fff;
+  color: var(--brand);
+  text-decoration: underline;
 }
